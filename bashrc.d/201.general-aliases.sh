@@ -1,0 +1,5 @@
+alias art='php artisan'
+alias pp='vendor/bin/phpunit'
+alias ppo='vendor/bin/phpunit --exclude-group requires-connection'
+alias gi='gem install --no-ri --no-rdoc'
+alias be='bundle exec'
