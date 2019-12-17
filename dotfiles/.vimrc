@@ -74,7 +74,7 @@ filetype indent on
 set backup 
 
 " store backup files in a separate, hidden location
-set backupdir=/.vim/backup,~/tmp,.		
+set backupdir=/.vim/backups,/tmp,.		
 
 " store swap files in a separate, hidden location
 set directory=~/.vim/swap-files,~/tmp,.
