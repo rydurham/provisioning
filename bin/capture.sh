@@ -19,6 +19,10 @@ cp ~/.profile $wd/dotfiles/.profile
 echo "cp ~/.vimrc"
 cp ~/.vimrc $wd/dotfiles/.vimrc
 
+# Vim Plugin List
+echo "cp ~/.vim/plugins.vim"
+cp ~/.vimrc $wd/dotfiles/plugins.vim
+
 # Tmux Conf
 echo "cp ~/.tmux.conf"
 cp ~/.tmux.conf $wd/dotfiles/.tmux.conf
