@@ -21,7 +21,7 @@ cp ~/.vimrc $wd/dotfiles/.vimrc
 
 # Vim Plugin List
 echo "cp ~/.vim/plugins.vim"
-cp ~/.vimrc $wd/dotfiles/plugins.vim
+cp ~/.vim/plugins.vim $wd/dotfiles/plugins.vim
 
 # Tmux Conf
 echo "cp ~/.tmux.conf"
