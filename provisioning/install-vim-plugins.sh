@@ -3,7 +3,7 @@
 # Make sure we have a destination folder for the plugins
 if [ ! -d ~/.vim/bundle ]
 then
-	mkdir ~/.vim/bundle
+    mkdir ~/.vim/bundle
 fi
 
 # Vundle
@@ -24,3 +24,8 @@ then
     git clone https://github.com/haishanh/night-owl.vim.git ~/.vim/bundle/night-owl.vim
 fi
 
+# Nerd Tree
+if [ ! -d ~/.vim/bundle/nerdtree ]
+then
+    git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+fi

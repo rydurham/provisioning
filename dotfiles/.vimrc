@@ -92,4 +92,5 @@ nmap <C-Down> ddp
 vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
 
-
+" Nerd Tree
+nmap <C-e> :NERDTreeToggle<CR>
