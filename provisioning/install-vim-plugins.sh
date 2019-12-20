@@ -29,3 +29,9 @@ if [ ! -d ~/.vim/bundle/nerdtree ]
 then
     git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
 fi
+
+# Lightline 
+if [ ! -d ~/.vim/bundle/lightline.vim ]
+then
+    git clone https://github.com/itchyny/lightline.vim.git ~/.vim/bundle/lightline.vim
+fi

@@ -94,3 +94,7 @@ vmap <C-Down> xp`[V`]
 
 " Nerd Tree
 nmap <C-e> :NERDTreeToggle<CR>
+
+" Lightline configuration
+set laststatus=2
+set noshowmode
