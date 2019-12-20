@@ -1,14 +1,16 @@
 " Plugins
 so ~/.vim/plugins.vim
 
-" Theme					
-" https://github.com/haishanh/night-owl.vim
-colorscheme night-owl
-
-set termguicolors
+" Enable termguicolors if available
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " Enable syntax highlighting
-syntax on
+syntax enable
+
+" Theme					
+colorscheme night-owl
 
 " Show line numbers
 set number			
