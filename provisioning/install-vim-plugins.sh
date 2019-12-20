@@ -15,7 +15,7 @@ fi
 # CtrlP
 if [ ! -d ~/.vim/bundle/ctrlp.vim ]
 then
-    git clone https://github.com/kien/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+    git clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
 fi
 
 # Night Owl Theme
