@@ -98,3 +98,13 @@ nmap <C-e> :NERDTreeToggle<CR>
 " Lightline configuration
 set laststatus=2
 set noshowmode
+
+" Hard mode!
+noremap <Down> <Nop>
+inoremap <Down> <Nop>
+inoremap <Up> <Nop>
+noremap <Up> <Nop>
+inoremap <Left> <Nop>
+noremap <Left> <Nop>
+inoremap <Right> <Nop>
+noremap <Right> <Nop>
