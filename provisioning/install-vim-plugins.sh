@@ -35,3 +35,9 @@ if [ ! -d ~/.vim/bundle/lightline.vim ]
 then
     git clone https://github.com/itchyny/lightline.vim.git ~/.vim/bundle/lightline.vim
 fi
+
+# Vim-Elixir 
+if [ ! -d ~/.vim/bundle/vim-elixir ]
+then
+    git clone https://github.com/elixir-editors/vim-elixir.git ~/.vim/bundle/vim-elixir
+fi

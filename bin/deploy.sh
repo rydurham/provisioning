@@ -15,10 +15,20 @@ cp $wd/dotfiles/.bashrc ~/.bashrc
 echo "cp ~/.profile"
 cp $wd/dotfiles/.profile ~/.profile
 
-# Ensure the ~/.vim directory exists
+# Ensure the ~/.vim directories exists
 if [ ! -d ~/.vim ]
 then
-	mkdir ~/.vim	
+    mkdir ~/.vim	
+fi
+
+if [ ! -d ~/.vim/swap-files ]
+then
+    mkdir ~/.vim/swap-files
+fi
+
+if [ ! -d ~/.vim/backups ]
+then
+    mkdir ~/.vim/backups
 fi
 
 # Vim RC
