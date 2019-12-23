@@ -1,18 +1,18 @@
 #!/bin/bash
 
-# Capure our current working directory
+# Capture our current working directory
 wd=$( pwd )
 
 # Bash Profile
-echo "cp ~/.bash_profile" 
+echo "mv ~/.bash_profile" 
 cp $wd/dotfiles/.bash_profile ~/.bash_profile
 
 # Bash RC
-echo "cp ~/.bashrc"
+echo "mv ~/.bashrc"
 cp $wd/dotfiles/.bashrc ~/.bashrc
 
 # Profile
-echo "cp ~/.profile"
+echo "mv ~/.profile"
 cp $wd/dotfiles/.profile ~/.profile
 
 # Ensure the ~/.vim directories exists
@@ -32,13 +32,13 @@ then
 fi
 
 # Vim RC
-echo "cp ~/.vimrc"
+echo "mv ~/.vimrc"
 cp $wd/dotfiles/.vimrc ~/.vimrc
 
 # Vim Plugins List
-echo "cp ~/.vim/plugins.vim"
+echo "mv ~/.vim/plugins.vim"
 cp $wd/dotfiles/plugins.vim ~/.vim/plugins.vim
 
 # Tmux Conf
-echo "cp ~/.tmux.conf"
+echo "mv ~/.tmux.conf"
 cp $wd/dotfiles/.tmux.conf ~/.tmux.conf
