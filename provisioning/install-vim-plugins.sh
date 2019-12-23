@@ -40,4 +40,10 @@ fi
 if [ ! -d ~/.vim/bundle/vim-elixir ]
 then
     git clone https://github.com/elixir-editors/vim-elixir.git ~/.vim/bundle/vim-elixir
+fi  
+
+# PHP.vim
+if [ ! -d ~/.vim/bundle/php.vim ]
+then
+    git clone https://github.com/StanAngeloff/php.vim.git ~/.vim/bundle/php.vim
 fi
