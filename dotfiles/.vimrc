@@ -99,6 +99,10 @@ nmap <C-e> :NERDTreeToggle<CR>
 set laststatus=2
 set noshowmode
 
+" Ctrl-P
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=100
+
 " Hard mode!
 noremap <Down> <Nop>
 inoremap <Down> <Nop>
