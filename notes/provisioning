@@ -1,0 +1,4 @@
+A few things that can't be automated: 
+
+Remove 'ctl+shift+e' keybinding conflict
+https://github.com/Microsoft/vscode/issues/48480#issuecomment-414464079
