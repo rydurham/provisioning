@@ -102,6 +102,7 @@ set noshowmode
 " Ctrl-P
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=100
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " Hard mode!
 noremap <Down> <Nop>
