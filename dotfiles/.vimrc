@@ -24,6 +24,9 @@ set showbreak=+++
 " Line wrap (number of cols)
 set textwidth=100		
 
+" Set a guideline indicator at column 80
+set colorcolumn=80
+
 " Highlight matching brace
 set showmatch			
 
