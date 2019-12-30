@@ -83,3 +83,14 @@ else
     git pull
     cd $OLDPWD
 fi
+
+# vim-surround
+echo "Vim-Surround Plugin"
+if [ ! -d ~/.vim/bundle/vim-surround ]
+then
+    git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
+else 
+    cd ~/.vim/bundle/vim-surround
+    git pull
+    cd $OLDPWD
+fi
