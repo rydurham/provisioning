@@ -6,6 +6,7 @@ git_purge() {
     # https://stevenharman.net/git-clean-delete-already-merged-branches
     git checkout dev
     git branch --merged dev | grep -v "\* dev" | xargs -n 1 git branch -d
+    git remote prune origin
 }
 
 alias gs='git status --short --branch'
