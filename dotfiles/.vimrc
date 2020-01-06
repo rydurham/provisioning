@@ -25,7 +25,7 @@ set showbreak=+++
 set textwidth=100		
 
 " Set a guideline indicator at column 80
-set colorcolumn=80
+call matchadd('ColorColumn', '\%80v', 100)
 
 " Highlight matching brace
 set showmatch			
