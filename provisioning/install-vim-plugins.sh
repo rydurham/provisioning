@@ -94,3 +94,16 @@ else
     git pull
     cd $OLDPWD
 fi
+
+# 
+echo "Laravel Blade Syntax Plugin"
+if [ ! -d ~/.vim/bundle/vim-blade.git ]
+then
+    git clone https://github.com/jwalton512/vim-blade.git
+else 
+    cd ~/.vim/bundle/vim-blade.git
+    git pull
+    cd $OLDPWD
+fi
+
+

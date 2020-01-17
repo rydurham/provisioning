@@ -95,6 +95,10 @@ nmap <C-Down> ddp
 vmap <C-Up> xkP`[V`]
 vmap <C-Down> xp`[V`]
 
+" Laravel Blade Filetype detection
+autocmd BufRead,BufNewFile *.blade.php set softtabstop=2 
+autocmd BufRead,BufNewFile *.blade.php set shiftwidth=2 
+
 " Nerd Tree
 nmap <C-e> :NERDTreeToggle<CR>
 
