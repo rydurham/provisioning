@@ -28,8 +28,11 @@ elixir_api() {
   docker-compose exec --user=1000 api sh -l -c "cd /var/api && ${*:-sh}"
   cd $OLDPWD
 }
-list_all_branches() {
-    for k in `git branch -a | perl -pe 's/^..(.*?)( ->.*)?$/\1/'`; do echo -e `git show --pretty=format:"%Cgreen%ci %Cblue%cr%Creset" $k -- | head -n 1`\\t$k; done | sort -r 
+carbon() {
+    docker run -it --rm -v $(pwd):/src node:carbon /bin/sh -c "cd /src; ${*:-sh}"
+}
+dubnium() {
+    docker run -it --rm -v $(pwd):/src node:dubnium /bin/sh -c "cd /src; ${*:-sh}" 
 }
 
 alias dc='docker-compose'
@@ -40,3 +43,5 @@ alias ses=sims_exec_schedule
 alias sef=sims_exec_fpm
 alias sp=sims_psql
 alias api=elixir_api
+alias carbon=carbon
+alias dubnium=dubnium
