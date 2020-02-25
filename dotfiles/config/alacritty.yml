@@ -1,0 +1,19 @@
+font:
+  normal:
+    family: "Dank Mono"
+  bold:
+    family: "Dank Mono"
+  size: 14.0
+colors:
+  primary:
+    background: "0x011627"
+    foreground: "0xD6DEEB"
+  normal:
+    black:   '0x011627'
+    red:     '0xFF5874'
+    green:   '0xADDB67'
+    yellow:  '0xF78C6C'
+    blue:    '0x82AAFF'
+    magenta: '0xC792EA'
+    cyan:    '0x7FDBCA'
+    white:   '0xAAAAAA'

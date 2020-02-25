@@ -26,3 +26,10 @@ cp ~/.vim/plugins.vim $wd/dotfiles/plugins.vim
 # Tmux Conf
 echo "cp ~/.tmux.conf"
 cp ~/.tmux.conf $wd/dotfiles/.tmux.conf
+
+# Alacritty config
+if [ -f ~/.config/alacritty/alacritty.yml ]
+then
+    echo "cp ~/.config/alacritty/alacritty.yml"
+    cp ~/.config/alacritty/alacritty.yml $wd/dotfiles/config/
+fi

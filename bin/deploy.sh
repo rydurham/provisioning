@@ -15,6 +15,14 @@ cp $wd/dotfiles/.bashrc ~/.bashrc
 echo "mv ~/.profile"
 cp $wd/dotfiles/.profile ~/.profile
 
+# Config files
+echo "mv ~/.config/alacritty/alacritty.yml"
+if [ ! -d ~/.config/alacritty ]
+then
+    mkdir ~/.config/alacritty
+fi
+cp $wd/dotfiles/config/alacritty.yml ~/.config/alacritty/
+
 # Ensure the ~/.vim directories exists
 if [ ! -d ~/.vim ]
 then
