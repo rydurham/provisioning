@@ -1,4 +1,9 @@
-A few things that can't be automated: 
+A few things that can't be automated:
 
 Remove 'ctl+shift+e' keybinding conflict
 https://github.com/Microsoft/vscode/issues/48480#issuecomment-414464079
+
+1. go to terminal type 'ibus-setup'
+2. go to Emoji tab, press the '...' next to Emoji choice to get 'select keyboard shortcut for switching' window
+3. use the delete button to delete the shortcut and leave nothing there, press OK
+4. Close
