@@ -4,7 +4,7 @@
 wd=$( pwd )
 
 # Bash Profile
-echo "mv ~/.bash_profile" 
+echo "mv ~/.bash_profile"
 cp $wd/dotfiles/.bash_profile ~/.bash_profile
 
 # Bash RC
@@ -26,7 +26,7 @@ cp $wd/dotfiles/config/alacritty.yml ~/.config/alacritty/
 # Ensure the ~/.vim directories exists
 if [ ! -d ~/.vim ]
 then
-    mkdir ~/.vim	
+    mkdir ~/.vim
 fi
 
 if [ ! -d ~/.vim/swap-files ]
@@ -50,3 +50,6 @@ cp $wd/dotfiles/plugins.vim ~/.vim/plugins.vim
 # Tmux Conf
 echo "mv ~/.tmux.conf"
 cp $wd/dotfiles/.tmux.conf ~/.tmux.conf
+
+# Add profile and bashrc updates to the current terminal session
+source ~/.profile
