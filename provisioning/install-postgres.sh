@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Install and Configure Postgres
+# Install
 sudo apt install postgresql postgresql-contrib -y
-sudo -i -u postgres
-createuser ryan -s
-createdb ryan
-psql -c "ALTER USER ryan WITH PASSWORD 'secret'"
 
+# Configure
+sudo -u postgres
+sudo -u postgres createuser ryan -s
+sudo -u postgres createdb ryan
+sudo -u postgres psql -c "ALTER USER ryan WITH PASSWORD 'secret'"
