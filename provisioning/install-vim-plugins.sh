@@ -9,7 +9,7 @@ fi
 
 # Vundle
 echo "Vundle Plugin"
-if [ ! -d ~/.vim/bundle/Vundle.vim ] 
+if [ ! -d ~/.vim/bundle/Vundle.vim ]
 then
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 else
@@ -51,18 +51,18 @@ else
     cd $OLDPWD
 fi
 
-# Lightline 
+# Lightline
 echo "Lightline Plugin"
 if [ ! -d ~/.vim/bundle/lightline.vim ]
 then
     git clone https://github.com/itchyny/lightline.vim.git ~/.vim/bundle/lightline.vim
-else 
+else
     cd ~/.vim/bundle/lightline.vim
     git pull
     cd $OLDPWD
 fi
 
-# Vim-Elixir 
+# Vim-Elixir
 echo "Vim-Elixir Plugin"
 if [ ! -d ~/.vim/bundle/vim-elixir ]
 then
@@ -71,14 +71,14 @@ else
     cd ~/.vim/bundle/vim-elixir
     git pull
     cd $OLDPWD
-fi  
+fi
 
 # PHP.vim
 echo "PHP.vim Plugin"
 if [ ! -d ~/.vim/bundle/php.vim ]
 then
     git clone https://github.com/StanAngeloff/php.vim.git ~/.vim/bundle/php.vim
-else 
+else
     cd ~/.vim/bundle/php.vim
     git pull
     cd $OLDPWD
@@ -89,21 +89,19 @@ echo "Vim-Surround Plugin"
 if [ ! -d ~/.vim/bundle/vim-surround ]
 then
     git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
-else 
+else
     cd ~/.vim/bundle/vim-surround
     git pull
     cd $OLDPWD
 fi
 
-# 
+#
 echo "Laravel Blade Syntax Plugin"
-if [ ! -d ~/.vim/bundle/vim-blade.git ]
+if [ ! -d ~/.vim/bundle/vim-blade ]
 then
-    git clone https://github.com/jwalton512/vim-blade.git
-else 
+    git clone https://github.com/jwalton512/vim-blade.git ~/.vim/bundle/vim-blade
+else
     cd ~/.vim/bundle/vim-blade.git
     git pull
     cd $OLDPWD
 fi
-
-
