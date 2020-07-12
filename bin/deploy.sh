@@ -2,26 +2,22 @@
 
 # Capture our current working directory
 wd=$( pwd )
+echo $wd
 
-# Bash Profile
+# # Bash Profile
 echo "mv ~/.bash_profile"
 cp $wd/dotfiles/.bash_profile ~/.bash_profile
+sed -i "s@DIR@$wd@g" ~/.bash_profile
 
 # Bash RC
 echo "mv ~/.bashrc"
 cp $wd/dotfiles/.bashrc ~/.bashrc
+sed -i "s@DIR@$wd@g" ~/.bashrc
 
 # Profile
 echo "mv ~/.profile"
 cp $wd/dotfiles/.profile ~/.profile
-
-# Config files
-echo "mv ~/.config/alacritty/alacritty.yml"
-if [ ! -d ~/.config/alacritty ]
-then
-    mkdir ~/.config/alacritty
-fi
-cp $wd/dotfiles/config/alacritty.yml ~/.config/alacritty/
+sed -i "s@DIR@$wd@g" ~/.profile
 
 # Ensure the ~/.vim directories exists
 if [ ! -d ~/.vim ]
