@@ -32,11 +32,12 @@ carbon() {
     docker run -it --rm -v $(pwd):/src node:carbon /bin/sh -c "cd /src; ${*:-sh}"
 }
 dubnium() {
-    docker run -it --rm -v $(pwd):/src node:dubnium /bin/sh -c "cd /src; ${*:-sh}" 
+    docker run -it --rm -v $(pwd):/src node:dubnium /bin/sh -c "cd /src; ${*:-sh}"
 }
 
 alias dc='docker-compose'
 alias dce='docker-compose exec'
+alias dcr='docker-compose run'
 alias sec=sims_exec_cli
 alias seq=sims_exec_queue
 alias ses=sims_exec_schedule
