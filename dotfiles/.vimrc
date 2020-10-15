@@ -118,6 +118,9 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 let g:go_fmt_command = "goimports"
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 
+" markdown
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
 " Hard mode!
 "noremap <Down> <Nop>
 "inoremap <Down> <Nop>
