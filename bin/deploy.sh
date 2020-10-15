@@ -49,6 +49,10 @@ cp $wd/dotfiles/.tmux.conf ~/.tmux.conf
 
 # Alacritty
 echo "mv ~/.config/alacritty/alacritty.yml"
+if [ ! -d ~/.config/alacritty ]
+then
+    mkdir ~/.config/alacritty
+fi
 cp $wd/dotfiles/config/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 # Add profile and bashrc updates to the current terminal session
