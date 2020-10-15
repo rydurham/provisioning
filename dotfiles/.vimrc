@@ -31,7 +31,7 @@ call matchadd('ColorColumn', '\%80v', 100)
 set showmatch			
 
 " Enable spell-checking
-set spell			
+" set spell			
 
 " Use visual bell (no beeping)
 set visualbell			 
@@ -47,6 +47,9 @@ set ignorecase
 
 " Search for strings incrementally
 set incsearch			 
+
+" Allow "auto" writing
+set autowrite
 
 " Auto-indent new lines
 set autoindent				
@@ -111,12 +114,16 @@ let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=100
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
+" vim-go
+let g:go_fmt_command = "goimports"
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+
 " Hard mode!
-noremap <Down> <Nop>
-inoremap <Down> <Nop>
-inoremap <Up> <Nop>
-noremap <Up> <Nop>
-inoremap <Left> <Nop>
-noremap <Left> <Nop>
-inoremap <Right> <Nop>
-noremap <Right> <Nop>
+"noremap <Down> <Nop>
+"inoremap <Down> <Nop>
+"inoremap <Up> <Nop>
+"noremap <Up> <Nop>
+"inoremap <Left> <Nop>
+"noremap <Left> <Nop>
+"inoremap <Right> <Nop>
+"noremap <Right> <Nop>

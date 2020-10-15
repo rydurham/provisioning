@@ -30,10 +30,10 @@ else
 fi
 
 # Night Owl Theme
-echo "Night Owl Plugin"
+echo "Night Owl Theme"
 if [ ! -d ~/.vim/bundle/night-owl.vim ]
 then
-    git clone https://github.com/haishanh/night-owl.vim.git ~/.vim/bundle/night-owl.vim
+    git clone https://github.com/charliesbot/night-owl.vim.git ~/.vim/bundle/night-owl.vim
 else
     cd ~/.vim/bundle/night-owl.vim
     git pull
@@ -62,17 +62,6 @@ else
     cd $OLDPWD
 fi
 
-# Vim-Elixir
-echo "Vim-Elixir Plugin"
-if [ ! -d ~/.vim/bundle/vim-elixir ]
-then
-    git clone https://github.com/elixir-editors/vim-elixir.git ~/.vim/bundle/vim-elixir
-else
-    cd ~/.vim/bundle/vim-elixir
-    git pull
-    cd $OLDPWD
-fi
-
 # PHP.vim
 echo "PHP.vim Plugin"
 if [ ! -d ~/.vim/bundle/php.vim ]
@@ -95,13 +84,26 @@ else
     cd $OLDPWD
 fi
 
-#
+# Blade Syntax
 echo "Laravel Blade Syntax Plugin"
 if [ ! -d ~/.vim/bundle/vim-blade ]
 then
     git clone https://github.com/jwalton512/vim-blade.git ~/.vim/bundle/vim-blade
 else
-    cd ~/.vim/bundle/vim-blade.git
+    cd ~/.vim/bundle/vim-blade
+    git pull
+    cd $OLDPWD
+fi
+
+# vim-go 
+echo "Golang Plugin"
+if [ ! -d ~/.vim/bundle/vim-go ]
+then
+    git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+    git checkout v1.24
+else
+    cd ~/.vim/bundle/vim-go
+    git checkout v1.24
     git pull
     cd $OLDPWD
 fi

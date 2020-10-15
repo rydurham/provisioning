@@ -9,14 +9,14 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'charliesbot/night-owl.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'haishanh/night-owl.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
-Plugin 'elixir-editors/vim-elixir'
 Plugin 'StanAngeloff/php.vim.git'
 Plugin 'tpope/vim-surround'
 Plugin 'jwalton512/vim-blade.git'
+Plugin 'fatih/vim-go'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
