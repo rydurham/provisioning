@@ -37,7 +37,7 @@ dubnium() {
 
 alias dc='docker-compose'
 alias dce='docker-compose exec'
-alias dcr='docker-compose run'
+alias dcr='docker-compose run --rm'
 alias sec=sims_exec_cli
 alias seq=sims_exec_queue
 alias ses=sims_exec_schedule
