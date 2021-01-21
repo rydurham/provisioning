@@ -46,3 +46,12 @@ alias sp=sims_psql
 alias api=elixir_api
 alias carbon=carbon
 alias dubnium=dubnium
+
+if [ -d "/home/ryan/Workbench/seymour" ] ; then
+    seymour_ops() {
+        cd /home/ryan/Workbench/seymour
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias smo=seymour_ops
+fi
