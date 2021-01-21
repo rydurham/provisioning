@@ -47,6 +47,15 @@ alias api=elixir_api
 alias carbon=carbon
 alias dubnium=dubnium
 
+if [ -d "/home/ryan/Workbench/stagerightlabs.com" ] ; then
+    srl_ops() {
+        cd /home/ryan/Workbench/stagerightlabs.com
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias srl=srl_ops
+fi
+
 if [ -d "/home/ryan/Workbench/seymour" ] ; then
     seymour_ops() {
         cd /home/ryan/Workbench/seymour
