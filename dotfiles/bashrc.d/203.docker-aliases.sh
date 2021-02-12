@@ -64,3 +64,12 @@ if [ -d "/home/ryan/Workbench/seymour" ] ; then
     }
     alias smo=seymour_ops
 fi
+
+if [ -d "/home/ryan/Workbench/adrianabaercreative.com" ] ; then
+    abc_ops() {
+        cd /home/ryan/Workbench/adrianabaercreative.com
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias abc=abc_ops
+fi
