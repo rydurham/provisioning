@@ -21,9 +21,6 @@ set linebreak
 " Wrap-broken line prefix
 set showbreak=+++ 		
 
-" Line wrap (number of cols)
-set textwidth=100		
-
 " Set a guideline indicator at column 80
 call matchadd('ColorColumn', '\%80v', 100)
 
