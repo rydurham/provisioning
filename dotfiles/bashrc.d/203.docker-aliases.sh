@@ -1,51 +1,72 @@
+alias dc='docker-compose'
+alias dce='docker-compose exec'
+alias dcr='docker-compose run --rm'
+
 sims_exec_cli() {
   cd /home/ryan/Workbench/phylos/ops/phylosbio.test
   docker-compose exec --user=1000 sims_php_cli sh -l -c "cd /var/www/sims && ${*:-sh}"
   cd $OLDPWD
 }
+alias sec=sims_exec_cli
+
 sims_exec_queue() {
   cd /home/ryan/Workbench/phylos/ops/phylosbio.test
   docker-compose exec --user=1000 sims_queue sh -l -c "cd /var/www/sims && ${*:-sh}"
   cd $OLDPWD
 }
+alias seq=sims_exec_queue
+
 sims_exec_schedule() {
   cd /home/ryan/Workbench/phylos/ops/phylosbio.test
   docker-compose exec --user=1000 sims_schedule sh -l -c "cd /var/www/sims && ${*:-sh}"
   cd $OLDPWD
 }
+alias ses=sims_exec_schedule
+
 sims_exec_fpm() {
   cd /home/ryan/Workbench/phylos/ops/phylosbio.test
   docker-compose exec --user=1000 sims_php_fpm sh -l -c "cd /var/www/sims && ${*:-sh}"
   cd $OLDPWD
 }
+alias sef=sims_exec_fpm
+
 sims_psql() {
   cd /home/ryan/Workbench/phylos/ops/phylosbio.test
   docker-compose exec --user=postgres postgres /bin/bash -c 'export TERM=xterm-256color; psql -U phylosian phylos'
   cd $OLDPWD
 }
+alias sp=sims_psql
+
 elixir_api() {
   cd /home/ryan/Workbench/phylos/ops/phylosbio.test
   docker-compose exec --user=1000 api sh -l -c "cd /var/api && ${*:-sh}"
   cd $OLDPWD
 }
+alias api=elixir_api
+
 carbon() {
     docker run -it --rm -v $(pwd):/src node:carbon /bin/sh -c "cd /src; ${*:-sh}"
 }
+
 dubnium() {
     docker run -it --rm -v $(pwd):/src node:dubnium /bin/sh -c "cd /src; ${*:-sh}"
 }
 
-alias dc='docker-compose'
-alias dce='docker-compose exec'
-alias dcr='docker-compose run --rm'
-alias sec=sims_exec_cli
-alias seq=sims_exec_queue
-alias ses=sims_exec_schedule
-alias sef=sims_exec_fpm
-alias sp=sims_psql
-alias api=elixir_api
-alias carbon=carbon
-alias dubnium=dubnium
+fermium() {
+    docker run -it --rm -v $(pwd):/src node:fermium
+}
+
+php7.3() {
+    docker run -it --rm -v $(pwd):/var/www -w /var/www -u 1000 stagerightlabs/php-test-runner:7.3 /bin/bash -c "${*:-bash}"
+}
+
+php7.4() {
+    docker run -it --rm -v $(pwd):/var/www -w /var/www -u 1000 stagerightlabs/php-test-runner:7.4 /bin/bash -c "${*:-bash}"
+}
+
+php8.0() {
+    docker run -it --rm -v $(pwd):/var/www -w /var/www -u 1000 stagerightlabs/php-test-runner:8.0 /bin/bash -c "${*:-bash}"
+}
 
 if [ -d "/home/ryan/Workbench/stagerightlabs.com" ] ; then
     srl_ops() {
