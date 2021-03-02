@@ -57,15 +57,33 @@ fermium() {
 }
 
 php7.3() {
-    docker run -it --rm -v $(pwd):/var/www -w /var/www -u 1000 stagerightlabs/php-test-runner:7.3 /bin/bash -c "${*:-bash}"
+    docker run -it --rm \
+        -u 1000 \
+        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
+        -v $(pwd):/var/www \
+        -v ~/.config/composer:/home/ubuntu/.config/composer \
+        -w /var/www \
+        stagerightlabs/php-test-runner:7.3 /bin/bash -c "${*:-bash}"
 }
 
 php7.4() {
-    docker run -it --rm -v $(pwd):/var/www -w /var/www -u 1000 stagerightlabs/php-test-runner:7.4 /bin/bash -c "${*:-bash}"
+    docker run -it --rm \
+        -u 1000 \
+        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
+        -v $(pwd):/var/www \
+        -v ~/.config/composer:/home/ubuntu/.config/composer \
+        -w /var/www \
+        stagerightlabs/php-test-runner:7.4 /bin/bash -c "${*:-bash}"
 }
 
 php8.0() {
-    docker run -it --rm -v $(pwd):/var/www -w /var/www -u 1000 stagerightlabs/php-test-runner:8.0 /bin/bash -c "${*:-bash}"
+    docker run -it --rm \
+        -u 1000 \
+        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
+        -v $(pwd):/var/www \
+        -v ~/.config/composer:/home/ubuntu/.config/composer \
+        -w /var/www \
+        stagerightlabs/php-test-runner:8.0 /bin/bash -c "${*:-bash}"
 }
 
 if [ -d "/home/ryan/Workbench/stagerightlabs.com" ] ; then
