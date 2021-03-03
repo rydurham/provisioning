@@ -112,3 +112,12 @@ if [ -d "/home/ryan/Workbench/adrianabaercreative.com" ] ; then
     }
     alias abc=abc_ops
 fi
+
+if [ -d "/home/ryan/Workbench/sidekick" ] ; then
+    sidekick_ops() {
+        cd /home/ryan/Workbench/sidekick
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias sk=sidekick_ops
+fi
