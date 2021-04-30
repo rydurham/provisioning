@@ -124,3 +124,12 @@ if [ -d "/home/ryan/Workbench/sidekick" ] ; then
     }
     alias sk=sidekick_ops
 fi
+
+if [ -d "/home/ryan/Workbench/firebrand/eoa-docker" ] ; then
+    eoa_ops() {
+        cd /home/ryan/Workbench/firebrand/eoa-docker/local
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias eoa=eoa_ops
+fi
