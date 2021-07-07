@@ -1,6 +1,7 @@
 alias dc='docker-compose'
 alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm'
+alias sail='bash vendor/bin/sail'
 
 sims_exec_cli() {
   cd /home/ryan/Workbench/phylos/ops/phylosbio.test
