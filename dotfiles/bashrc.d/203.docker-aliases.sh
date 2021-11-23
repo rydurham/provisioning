@@ -54,16 +54,6 @@ node16() {
     docker run -it --rm -v $(pwd):/src node:16-alpine /bin/sh -c "cd /src; ${*:-sh}"
 }
 
-php7.3() {
-    docker run -it --rm \
-        -u 1000 \
-        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
-        -v $(pwd):/var/www \
-        -w /var/www \
-        -p 8000:8000 \
-        stagerightlabs/php-test-runner:7.3 /bin/bash -c "${*:-bash}"
-}
-
 php7.4() {
     docker run -it --rm \
         -u 1000 \
@@ -83,6 +73,17 @@ php8.0() {
         -p 8000:8000 \
         stagerightlabs/php-test-runner:8.0 /bin/bash -c "${*:-bash}"
 }
+
+php8.1() {
+    docker run -it --rm \
+        -u 1000 \
+        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
+        -v $(pwd):/var/www \
+        -w /var/www \
+        -p 8000:8000 \
+        stagerightlabs/php-test-runner:8.1 /bin/bash -c "${*:-bash}"
+}
+
 
 if [ -d "/home/ryan/Workbench/stagerightlabs.com" ] ; then
     srl_ops() {
