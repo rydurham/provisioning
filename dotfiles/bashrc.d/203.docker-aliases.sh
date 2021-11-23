@@ -59,7 +59,6 @@ php7.3() {
         -u 1000 \
         -e COMPOSER_HOME=/home/ubuntu/.config/composer \
         -v $(pwd):/var/www \
-        -v ~/.config/composer:/home/ubuntu/.config/composer \
         -w /var/www \
         -p 8000:8000 \
         stagerightlabs/php-test-runner:7.3 /bin/bash -c "${*:-bash}"
@@ -70,7 +69,6 @@ php7.4() {
         -u 1000 \
         -e COMPOSER_HOME=/home/ubuntu/.config/composer \
         -v $(pwd):/var/www \
-        -v ~/.config/composer:/home/ubuntu/.config/composer \
         -w /var/www \
         -p 8000:8000 \
         stagerightlabs/php-test-runner:7.4 /bin/bash -c "${*:-bash}"
@@ -81,7 +79,6 @@ php8.0() {
         -u 1000 \
         -e COMPOSER_HOME=/home/ubuntu/.config/composer \
         -v $(pwd):/var/www \
-        -v ~/.config/composer:/home/ubuntu/.config/composer \
         -w /var/www \
         -p 8000:8000 \
         stagerightlabs/php-test-runner:8.0 /bin/bash -c "${*:-bash}"
