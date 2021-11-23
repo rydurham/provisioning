@@ -45,16 +45,13 @@ elixir_api() {
 }
 alias api=elixir_api
 
-carbon() {
-    docker run -it --rm -v $(pwd):/src node:carbon /bin/sh -c "cd /src; ${*:-sh}"
+
+node14() {
+    docker run -it --rm -v $(pwd):/src node:fermium-alpine /bin/sh -c "cd /src; ${*:-sh}"
 }
 
-dubnium() {
-    docker run -it --rm -v $(pwd):/src node:dubnium /bin/sh -c "cd /src; ${*:-sh}"
-}
-
-fermium() {
-    docker run -it --rm -v $(pwd):/src node:fermium
+node16() {
+    docker run -it --rm -v $(pwd):/src node:16-alpine /bin/sh -c "cd /src; ${*:-sh}"
 }
 
 php7.3() {
