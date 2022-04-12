@@ -139,3 +139,22 @@ if [ -d "/home/ryan/Workbench/firebrand/eoa-docker" ] ; then
     }
     alias eoa=eoa_ops
 fi
+
+
+if [ -d "/home/ryan/Workbench/symfony-starter" ] ; then
+    ss_ops() {
+        cd /home/ryan/Workbench/symfony-starter
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias ss=ss_ops
+fi
+
+if [ -d "/home/ryan/Workbench/firebrand/javelina-testbed" ] ; then
+    jt_ops() {
+        cd /home/ryan/Workbench/firebrand/javelina-testbed
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias jt=jt_ops
+fi
