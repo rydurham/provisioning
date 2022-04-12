@@ -54,6 +54,16 @@ node16() {
     docker run -it --rm -v $(pwd):/src node:16-alpine /bin/sh -c "cd /src; ${*:-sh}"
 }
 
+php7.2() {
+    docker run -it --rm \
+        -u 1000 \
+        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
+        -v $(pwd):/var/www \
+        -w /var/www \
+        -p 8000:8000 \
+        stagerightlabs/php-test-runner:7.2 /bin/sh -c "${*:-sh}"
+}
+
 php7.4() {
     docker run -it --rm \
         -u 1000 \
