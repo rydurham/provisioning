@@ -77,21 +77,21 @@ php7.4() {
 php8.0() {
     docker run -it --rm \
         -u 1000 \
-        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
+        -e COMPOSER_HOME=/home/www-data/.config/composer \
         -v $(pwd):/var/www \
         -w /var/www \
         -p 8000:8000 \
-        stagerightlabs/php-test-runner:8.0 /bin/bash -c "${*:-bash}"
+        stagerightlabs/php-test-runner:8.0 /bin/sh -c "${*:-sh}"
 }
 
 php8.1() {
     docker run -it --rm \
         -u 1000 \
-        -e COMPOSER_HOME=/home/ubuntu/.config/composer \
+        -e COMPOSER_HOME=/home/www-data/.config/composer \
         -v $(pwd):/var/www \
         -w /var/www \
         -p 8000:8000 \
-        stagerightlabs/php-test-runner:8.1 /bin/bash -c "${*:-bash}"
+        stagerightlabs/php-test-runner:8.1 /bin/sh -c "${*:-sh}"
 }
 
 
