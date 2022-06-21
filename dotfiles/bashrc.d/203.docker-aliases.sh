@@ -114,15 +114,6 @@ if [ -d "/home/ryan/Workbench/seymour" ] ; then
     alias smo=seymour_ops
 fi
 
-if [ -d "/home/ryan/Workbench/adrianabaercreative.com" ] ; then
-    abc_ops() {
-        cd /home/ryan/Workbench/adrianabaercreative.com
-        ./ops.sh ${*:-ps}
-        cd $OLDPWD
-    }
-    alias abc=abc_ops
-fi
-
 if [ -d "/home/ryan/Workbench/sidekick" ] ; then
     sidekick_ops() {
         cd /home/ryan/Workbench/sidekick
@@ -130,6 +121,15 @@ if [ -d "/home/ryan/Workbench/sidekick" ] ; then
         cd $OLDPWD
     }
     alias sk=sidekick_ops
+fi
+
+if [ -d "/home/ryan/Workbench/greenhouse" ] ; then
+    greenhouse_ops() {
+        cd /home/ryan/Workbench/greenhouse
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias gh=greenhouse_ops
 fi
 
 if [ -d "/home/ryan/Workbench/firebrand/eoa-docker" ] ; then
