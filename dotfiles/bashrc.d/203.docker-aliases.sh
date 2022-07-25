@@ -3,50 +3,6 @@ alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm'
 alias sail='bash vendor/bin/sail'
 
-if [ -d "/home/ryan/Workbench/phylos/ops/phylosbio.test" ] ; then
-    sims_exec_cli() {
-    cd /home/ryan/Workbench/phylos/ops/phylosbio.test
-    docker-compose exec --user=1000 sims_php_cli sh -l -c "cd /var/www/sims && ${*:-sh}"
-    cd $OLDPWD
-    }
-    alias sec=sims_exec_cli
-
-    sims_exec_queue() {
-    cd /home/ryan/Workbench/phylos/ops/phylosbio.test
-    docker-compose exec --user=1000 sims_queue sh -l -c "cd /var/www/sims && ${*:-sh}"
-    cd $OLDPWD
-    }
-    alias seq=sims_exec_queue
-
-    sims_exec_schedule() {
-    cd /home/ryan/Workbench/phylos/ops/phylosbio.test
-    docker-compose exec --user=1000 sims_schedule sh -l -c "cd /var/www/sims && ${*:-sh}"
-    cd $OLDPWD
-    }
-    alias ses=sims_exec_schedule
-
-    sims_exec_fpm() {
-    cd /home/ryan/Workbench/phylos/ops/phylosbio.test
-    docker-compose exec --user=1000 sims_php_fpm sh -l -c "cd /var/www/sims && ${*:-sh}"
-    cd $OLDPWD
-    }
-    alias sef=sims_exec_fpm
-
-    sims_psql() {
-    cd /home/ryan/Workbench/phylos/ops/phylosbio.test
-    docker-compose exec --user=postgres postgres /bin/bash -c 'export TERM=xterm-256color; psql -U phylosian phylos'
-    cd $OLDPWD
-    }
-    alias sp=sims_psql
-
-    elixir_api() {
-    cd /home/ryan/Workbench/phylos/ops/phylosbio.test
-    docker-compose exec --user=1000 api sh -l -c "cd /var/api && ${*:-sh}"
-    cd $OLDPWD
-    }
-    alias api=elixir_api
-fi
-
 node14() {
     docker run -it --rm -v $(pwd):/src node:fermium-alpine /bin/sh -c "cd /src; ${*:-sh}"
 }
@@ -129,7 +85,16 @@ if [ -d "/home/ryan/Workbench/greenhouse" ] ; then
         ./ops.sh ${*:-ps}
         cd $OLDPWD
     }
-    alias gh=greenhouse_ops
+    alias gr=greenhouse_ops
+fi
+
+if [ -d "/home/ryan/Workbench/laravel-flyer" ] ; then
+    laravelflyer_ops() {
+        cd /home/ryan/Workbench/laravel-flyer/docker
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias lf=laravelflyer_ops
 fi
 
 if [ -d "/home/ryan/Workbench/firebrand/eoa-docker" ] ; then
@@ -158,4 +123,13 @@ if [ -d "/home/ryan/Workbench/firebrand/javelina-testbed" ] ; then
         cd $OLDPWD
     }
     alias jt=jt_ops
+fi
+
+if [ -d "/home/ryan/Workbench/phylos/ops/phylosbio.test" ] ; then
+    phylops() {
+        cd /home/ryan/Workbench/phylos/ops/phylosbio.test
+        ./ops.sh ${*:-ps}
+        cd $OLDPWD
+    }
+    alias ph=phylops
 fi
