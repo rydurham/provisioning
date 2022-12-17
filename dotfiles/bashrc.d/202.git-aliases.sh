@@ -3,10 +3,18 @@ list_all_branches() {
 }
 
 git_purge() {
-    # https://stevenharman.net/git-clean-delete-already-merged-branches
-    git checkout dev
-    git branch --merged dev | grep -v "\* dev" | xargs -n 1 git branch -d
-    git remote prune origin
+    # have any arguments been passed?
+    if [ $# -gt 0 ];then
+        BRANCH=$1
+        echo $BRANCH
+
+        # https://stevenharman.net/git-clean-delete-already-merged-branches
+        git checkout $BRANCH
+        git branch --merged $BRANCH | grep -v "\* $BRANCH" | xargs -n 1 git branch -d
+        git remote prune origin
+    else
+        echo "No branch specified"
+    fi
 }
 
 alias gs='git status --short --branch'
