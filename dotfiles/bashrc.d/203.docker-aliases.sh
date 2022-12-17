@@ -1,7 +1,7 @@
 alias dc='docker-compose'
 alias dce='docker-compose exec'
 alias dcr='docker-compose run --rm'
-alias sail='bash vendor/bin/sail'
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 node14() {
     docker run -it --rm -v $(pwd):/src node:fermium-alpine /bin/sh -c "cd /src; ${*:-sh}"
