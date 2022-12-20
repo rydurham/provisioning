@@ -20,6 +20,11 @@ echo "Created symbolic link to ~/.config/alacritty"
 rm -rf $HOME/.config/alacritty
 ln -s $PROJECT_ROOT/conf/alacritty $HOME/.config/alacritty
 
+# Tmux
+echo "Created symbolic link to ~/.tmux.conf"
+rm $HOME/.tmux.conf
+ln -s $PROJECT_ROOT/conf/tmux/tmux.conf $HOME/.tmux.conf
+
 # NeoVim
 echo "Created symbolid link to ~/.config/nvim"
 rm -rf $HOME/.config/nvim
