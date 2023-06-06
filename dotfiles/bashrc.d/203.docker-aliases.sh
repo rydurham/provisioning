@@ -97,9 +97,9 @@ if [ -d "/home/ryan/Workbench/laravel-flyer" ] ; then
     alias lf=laravelflyer_ops
 fi
 
-if [ -d "/home/ryan/Workbench/firebrand/eoa-docker" ] ; then
+if [ -d "/home/ryan/Workbench/firebrand/eoa" ] ; then
     eoa_ops() {
-        cd /home/ryan/Workbench/firebrand/eoa-docker/local
+        cd /home/ryan/Workbench/firebrand/eoa
         ./ops.sh ${*:-ps}
         cd $OLDPWD
     }
